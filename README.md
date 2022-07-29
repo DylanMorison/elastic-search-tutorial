@@ -1,4 +1,4 @@
-### Elastic Stack:
+## Elastic Stack:
 
 -   **Elastic Search**
 -   **Kibana**
@@ -13,7 +13,7 @@
     -   **SQL**: Elasticsearch queries are written in Query DSL. It is flexible but verbose.
 -   **Beats**
 
-Summary:
+### Summary of Elastic Stack
 
 The center of it all is elastic search, which contains the data. Injecting data into elastic search can be done with **beats** or **elastic stash**, as well as through elasticsearch's api. **Kibana** is a UI that sits on top of elasticsearch to let you visualize the data that you receive. **X-pack** enables additional features such as ML.
 
