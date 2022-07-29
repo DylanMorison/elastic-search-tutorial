@@ -29,6 +29,17 @@ This term originates from before X-pack existed. The `elastic stack` is a supers
 
 ## Lecture 4: Walk-through of common architectures
 
-Suppose we have an E-commerce app.  Our data is stored in a relational db such as postgres.
+Suppose we have an E-commerce app. Our data is stored in a relational db such as postgres.
 
 ![hi](./course-diagrams/asdasd.png)
+
+We want to improve the search functionality of this app. So far it has been directly using the postgres db to get search info, but this is inefficient and not what dbs are for. Elasticsearch is _much_ better for this. When a user types in a search from the e-commerce frontend, the request is sent directly to elasticsearch. This can be done with an HTTP req, however:
+
+![get search info from elasticsearch](course-diagrams/Screenshot%20from%202022-07-29%2015-31-53.png)
+
+But how do we get data into elasticsearch in the first place? And how do we keep it updated? We will do this with data duplication from our postgres db. If a user adds a new product though, how do we get it into elasticsearch? You will need to write a script that imports that data. From the moment the data is imported elasticsearch will keep it updated.  This is the simplistic usage of elasticsearch. 
+<br>
+
+Now, what if we want to implement a UI for elasticsearch?  We would use kibana for this. 
+
+![kibana](course-diagrams/Screenshot%20from%202022-07-29%2015-37-38.png)
