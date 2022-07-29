@@ -1,4 +1,11 @@
-## Elastic Stack:
+# Elastic Stack Udemy Course Notes
+
+| Action                 | Date    |
+| ---------------------- | ------- |
+| Started Course         | 8/29/22 |
+| Completed Lectures 1-X | 8/29/22 |
+
+## Lecture 3: Elastic Stack:
 
 -   **Elastic Search**
 -   **Kibana**
@@ -17,5 +24,7 @@
 
 The center of it all is elastic search, which contains the data. Injecting data into elastic search can be done with **beats** or **elastic stash**, as well as through elasticsearch's api. **Kibana** is a UI that sits on top of elasticsearch to let you visualize the data that you receive. **X-pack** enables additional features such as ML.
 
-ELK Stack = `E`lasticsearch + `L`ogstash + `K`ibana 
+ELK Stack = `E`lasticsearch + `L`ogstash + `K`ibana
 This term originates from before X-pack existed. The `elastic stack` is a superset of the `ELK` stack.
+
+## Lecture 4: Walk-through of common architectures
