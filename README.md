@@ -54,10 +54,22 @@ We will need to spin up a dedicated server to run kibana and configure it with e
 
 We want to monitor access logs and error logs now too. We can even check response times for each endpoint. This allows us to identify bad deployments. `Filebeat` can be used for this task.
 
-Next, fast forward 6 months. We have added a ton more code, functionality, and products to the e-commerce app. We will want to wire up `Logstash` for event processing.  
+Next, fast forward 6 months. We have added a ton more code, functionality, and products to the e-commerce app. We will want to wire up `Logstash` for event processing.
 
 ![Logstash](course-diagrams/Screenshot%20from%202022-07-29%2015-48-44.png)
 
-## Lecture 10: Understanding the basics.
+## Lecture 10: Understanding the basics, ARCHITECTURE
 
-- 
+When we started up elasticsearch, what actually happened is that we started up a `node`.
+
+`Node`: An instance of elasticsearch that stores data. To ensure we can store many terabytes of data, we can spin up as many nodes as we want. Each node will then store a _part_ of our data. You can run any number of nodes on a single machine. In development it is not a huge deal to have many nodes on a single machine, but in prod you should have one node per server or container.
+
+![nodes](course-diagrams/elasticsearchnodes.png)
+
+Each node belongs to what is called a `Cluster`.
+
+`Cluster`: A collection of related nodes that together, contain all of our data. We can have many clusters if we want, but one is usually enough. It is possible to perform cross cluster searches, but it is not common.
+
+When a node starts up, it will automatically create its own cluster, or join a cluster that is already running. There are problems with only having 1 node...
+
+![cluster](course-diagrams/cluster.png)
