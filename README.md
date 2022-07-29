@@ -28,3 +28,7 @@ ELK Stack = `E`lasticsearch + `L`ogstash + `K`ibana
 This term originates from before X-pack existed. The `elastic stack` is a superset of the `ELK` stack.
 
 ## Lecture 4: Walk-through of common architectures
+
+Suppose we have an E-commerce app.  Our data is stored in a relational db such as postgres.
+
+![hi](./course-diagrams/asdasd.png)
