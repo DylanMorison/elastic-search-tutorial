@@ -1,5 +1,7 @@
 # Elastic Stack Udemy Course Notes
 
+![elastic stack logo](course-diagrams/Screenshot%20from%202022-07-29%2016-23-07.png)
+
 Course URL: https://www.udemy.com/course/elasticsearch-complete-guide/learn/lecture/7373340?start=0#overview
 
 All images taken directly from Bo Andersen's lecture slides.
@@ -55,3 +57,7 @@ We want to monitor access logs and error logs now too. We can even check respons
 Next, fast forward 6 months. We have added a ton more code, functionality, and products to the e-commerce app. We will want to wire up `Logstash` for event processing.  
 
 ![Logstash](course-diagrams/Screenshot%20from%202022-07-29%2015-48-44.png)
+
+## Lecture 10: Understanding the basics.
+
+- 
