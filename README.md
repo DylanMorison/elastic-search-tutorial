@@ -73,3 +73,12 @@ Each node belongs to what is called a `Cluster`.
 When a node starts up, it will automatically create its own cluster, or join a cluster that is already running. There are problems with only having 1 node...
 
 ![cluster](course-diagrams/cluster.png)
+
+But how is data organized and stored? Each unit of data that you store within a cluster is called a document. Documents are JSON objects containing whatever information you want to store. When you index a document, the original json document that you sent to elasticsearch, is stored along with metadata.
+
+![cluster document json example](course-diagrams/Screen%20Shot%202022-07-29%20at%204.56.00%20PM.png)
+
+Every document is stored with an index. An index groups documents together logically, as well as provides configuration objects. 
+
+![index](course-diagrams/indexes.png)
+![index](course-diagrams/lecture10summary.png)
